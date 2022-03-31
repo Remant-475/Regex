@@ -10,6 +10,7 @@ namespace Regexassignment
     internal class Validitation
     {
         public Regex FirstnameRegex = new Regex (@"^[A-Z][A-Z a-z]{2,}$");
+        public Regex LastnameRegex = new Regex(@"^[A-Z][A-Z a-z]{2,}$");
         public void ValidFirstName(string firstname)
         {
             Console.WriteLine("\nFirst Name:" +firstname);
@@ -22,6 +23,19 @@ namespace Regexassignment
                 Console.WriteLine("Firstname is invalid");
              }
         }
+        public void VaidLastName(string lastname)
+        {
+            Console.WriteLine("\nLast Name:" + lastname);
+            if (LastnameRegex.IsMatch(lastname))
+            {
+                Console.WriteLine("Last Name is valid");
+            }
+            else
+            {
+                Console.WriteLine("Last Name is invalid");
+            }
+        }
+
     }
 }
 

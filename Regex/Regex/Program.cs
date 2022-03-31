@@ -10,6 +10,9 @@ namespace Regexassignment
             Console.WriteLine("Enter the FirstName");
             string firstname=Console.ReadLine();
             validitation.ValidFirstName(firstname);
+            Console.WriteLine("Enter the LastName");
+            string lastname = Console.ReadLine();
+            validitation.ValidFirstName(lastname);
         }
     }
 }
