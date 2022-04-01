@@ -14,7 +14,10 @@ namespace Regexassignment
         public Regex EmailRegex = new Regex(@"^[A-z a-z]+([.+-][A-Z a-z 0-9]+)*@[A-Z a-z 0-9]+.[A-Z a-z]([.[A-z a-z]{2,})?$");
         public Regex PhoneRegex = new Regex(@"^[]0-9]{2}\s[0-9]{10}$");
         public Regex PasswordRule_1 = new Regex(@"^[A-Z a-z]{8,}$");
-        public Regex PasswordRule_2 = new Regex(@"^?=.*[A-Z a-z]{8,}$");
+        public Regex PasswordRule_2 = new Regex(@"^(?=.*[A-Z])[A-Z a-z]{8,}$");
+        public Regex PasswordRule_3 = new Regex(@"^(?=.*[A-Z])(?=.*[0-9])[A-Z a-z 0-9]{8,}$");
+
+
         public void ValidFirstName(string firstname)
         {
             Console.WriteLine("\nFirst Name:" +firstname);
@@ -71,6 +74,15 @@ namespace Regexassignment
             else
                 Console.WriteLine("Password is invalid");
         }
+        public void ValidPasswordRule_3(string Password_3)
+        {
+            Console.WriteLine("Password :" + Password_3);
+            if (PasswordRule_3.IsMatch(Password_3))
+                Console.WriteLine("Password  is valid");
+            else
+                Console.WriteLine("Password is invalid");
+        }
+
 
     }
 }
