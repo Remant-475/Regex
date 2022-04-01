@@ -13,6 +13,7 @@ namespace Regexassignment
         public Regex LastnameRegex = new Regex(@"^[A-Z][A-Z a-z]{2,}$");
         public Regex EmailRegex = new Regex(@"^[A-z a-z]+([.+-][A-Z a-z 0-9]+)*@[A-Z a-z 0-9]+.[A-Z a-z]([.[A-z a-z]{2,})?$");
         public Regex PhoneRegex = new Regex(@"^[]0-9]{2}\s[0-9]{10}$");
+        public Regex PasswordRule_1 = new Regex(@"^[A-Z a-z]{8,}$");
         public void ValidFirstName(string firstname)
         {
             Console.WriteLine("\nFirst Name:" +firstname);
@@ -52,6 +53,14 @@ namespace Regexassignment
                 Console.WriteLine("PhoneNumber is valid");
             else
                 Console.WriteLine("PhoneNumber is invalid");
+        }
+        public void ValidPasswordRule_1(string Password_1)
+        {
+            Console.WriteLine("Password :" + Password_1);
+            if (PasswordRule_1.IsMatch(Password_1))
+                Console.WriteLine("Password  is valid");
+            else
+                Console.WriteLine("Password is invalid");
         }
 
     }
