@@ -11,6 +11,7 @@ namespace Regexassignment
     {
         public Regex FirstnameRegex = new Regex (@"^[A-Z][A-Z a-z]{2,}$");
         public Regex LastnameRegex = new Regex(@"^[A-Z][A-Z a-z]{2,}$");
+        public Regex EmailRegex = new Regex(@"^[A-z a-z]+([.+-][A-Z a-z 0-9]+)*@[A-Z a-z 0-9]+.[A-Z a-z]([.[A-z a-z]{2,})?$");
         public void ValidFirstName(string firstname)
         {
             Console.WriteLine("\nFirst Name:" +firstname);
@@ -35,7 +36,15 @@ namespace Regexassignment
                 Console.WriteLine("Last Name is invalid");
             }
         }
-
+        public void Validemail(string email)
+        {
+            Console.WriteLine("Email :"+email);
+            if (EmailRegex.IsMatch(email))
+                Console.WriteLine("email is valid");
+            else
+                Console.WriteLine("email is invalid");
+        }
+       
     }
 }
 
