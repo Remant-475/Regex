@@ -16,6 +16,8 @@ namespace Regexassignment
         public Regex PasswordRule_1 = new Regex(@"^[A-Z a-z]{8,}$");
         public Regex PasswordRule_2 = new Regex(@"^(?=.*[A-Z])[A-Z a-z]{8,}$");
         public Regex PasswordRule_3 = new Regex(@"^(?=.*[A-Z])(?=.*[0-9])[A-Z a-z 0-9]{8,}$");
+        public Regex PasswordRule_4 = new Regex(@"^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9]{8,}$");
+
 
 
         public void ValidFirstName(string firstname)
@@ -82,7 +84,14 @@ namespace Regexassignment
             else
                 Console.WriteLine("Password is invalid");
         }
-
+        public void ValidPasswordRule_4(string Password_4)
+        {
+            Console.WriteLine("Password :" + Password_4);
+            if (PasswordRule_4.IsMatch(Password_4))
+                Console.WriteLine("Password  is valid");
+            else
+                Console.WriteLine("Password is invalid");
+        }
 
     }
 }
