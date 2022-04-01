@@ -12,7 +12,8 @@ namespace Regexassignment
                 Console.WriteLine("Choose 1 : First Name");
                 Console.WriteLine("Choose 2 : Last Name");
                 Console.WriteLine("Choose 3 : Email");
-                
+                Console.WriteLine("Choose 4 : PhoneNumber");
+
             Console.WriteLine("Enter Your Choice");
                 option = int.Parse(Console.ReadLine());
                 switch (option)
@@ -32,7 +33,12 @@ namespace Regexassignment
                         string email = Console.ReadLine();
                         validitation.Validemail(email);
                         break;
-                   
+                    case 4:
+                      Console.WriteLine("Enter the PhoneNumber");
+                     string phonenumber = Console.ReadLine();
+                       validitation.ValidPhoneNumber(phonenumber);
+                        break;
+
             } 
         }     
     }
