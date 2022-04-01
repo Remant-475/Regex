@@ -14,6 +14,7 @@ namespace Regexassignment
                 Console.WriteLine("Choose 3 : Email");
                 Console.WriteLine("Choose 4 : PhoneNumber");
                 Console.WriteLine("Choose 5 : Password for Rule 1");
+                 Console.WriteLine("Choose 6 : Password for Rule 2");
 
             Console.WriteLine("Enter Your Choice");
                 option = int.Parse(Console.ReadLine());
@@ -44,6 +45,11 @@ namespace Regexassignment
                         string Password_1 = Console.ReadLine();
                         validitation.ValidPasswordRule_1(Password_1);
                         break;
+                case 6:
+                    Console.WriteLine("Enter the Password");
+                    string Password_2 = Console.ReadLine();
+                    validitation.ValidPasswordRule_2(Password_2);
+                    break;
 
             } 
         }     
